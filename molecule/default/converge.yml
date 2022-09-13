@@ -1,0 +1,7 @@
+---
+- name: Converge
+  hosts: all
+  tasks:
+    - name: "Include jugggao.mysql"
+      include_role:
+        name: "jugggao.mysql"
