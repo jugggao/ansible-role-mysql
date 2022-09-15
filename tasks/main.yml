@@ -1,2 +1,17 @@
 ---
 # tasks file for mysql
+
+- name: import assert.yml
+  ansible.builtin.import_tasks: assert.yml
+  run_once: true
+  delegate_to: localhost
+
+- name: include setup-{{ ansible_os_family | lower }}.yml
+  ansible.builtin.include_tasks: "setup-{{ ansible_os_family | lower }}.yml"
+
+# - name: install mysql
+#   ansible.builtin.package:
+#     name: '{{ mysql_packages }}'
+#     state: present
+#   notify:
+#     - systemctl daemon-reexec

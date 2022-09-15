@@ -1,0 +1,18 @@
+---
+# assert task
+
+- name: test if mysql_version is set correctly
+  ansible.builtin.assert:
+    that:
+      - mysql_version is defined
+      - mysql_version == 5.7 or mysql_version == 8.0
+    fail_msg: mysql_version must be defined and be 5.7 or 8.0
+    quiet: true
+
+- name: test if mysql_bind_address is set correctly
+  ansible.builtin.assert:
+    that:
+      - mysql_bind_address is defined
+      - mysql_bind_address is string
+    fail_msg: mysql_bind_address must be defined and be a string
+    quiet: true

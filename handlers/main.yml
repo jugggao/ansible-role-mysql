@@ -1,2 +1,6 @@
 ---
 # handlers file for mysql
+
+- name: systemctl daemon-reexec
+  ansible.builtin.systemd:
+    daemon_reexec: true

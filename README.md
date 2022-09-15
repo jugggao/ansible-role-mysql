@@ -1,7 +1,7 @@
-Role Name
+MySQL
 =========
 
-A brief description of the role goes here.
+Install and configure MySQL on your system.
 
 Requirements
 ------------
@@ -30,9 +30,14 @@ Including an example of how to use your role (for instance, with variables passe
 License
 -------
 
-BSD
+Apache-2.0
 
 Author Information
 ------------------
 
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+Jugggao
+
+Reference Documentation 
+-----------------------
+
+- [A Quick Guide to Using the MySQL APT Repository](https://dev.mysql.com/doc/mysql-apt-repo-quick-guide/en/#repo-qg-apt-select-series)

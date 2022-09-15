@@ -1,0 +1,7 @@
+---
+# setup mysql on debian system.
+
+- name: add mysql repository into sources list
+  ansible.builtin.apt_repository:
+    repo: "deb http://repo.mysql.com/apt/debian {{ ansible_distribution_release }} mysql-8.0"
+    filename: mysql

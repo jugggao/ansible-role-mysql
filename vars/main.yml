@@ -1,2 +1,6 @@
 ---
 # vars file for mysql
+_mysql_package:
+  debian:
+    - mysql-server
+    - mysql-common
